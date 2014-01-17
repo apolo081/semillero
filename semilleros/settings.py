@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'core',
 
     #THIRD APPS
-    'south'
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
