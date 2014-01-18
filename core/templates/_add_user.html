@@ -1,0 +1,37 @@
+{% extends 'admin/change_form.html' %}
+{% load i18n %}
+{% block after_field_sets %}
+    <fieldset class="module aligned">
+    <legend>{% trans 'user'|capfirst %}</legend>
+        <div class="form-row field-username">
+            <div>
+                <label class="required" for="id_username">{% trans 'username' %}</label>
+                <input class="vTextField" id="id_username" name="username" type="text" maxlength="15"/>
+            </div>
+        </div>
+        <div class="form-row field-password">
+            <div>
+                <label class="required" for="id_password">{% trans 'password' %}</label>
+                <input class="password" id="id_password" name="password" type="password"/>
+            </div>
+        </div>
+        <div class="form-row field-email">
+            <div>
+                <label class="required" for="id_email">{% trans 'email address' %}</label>
+                <input class="vTextField" id="id_email" name="email" type="text"/>
+            </div>
+        </div>
+        <div class="form-row field-lastname">
+            <div>
+                <label class="required" for="id_last_name">{% trans 'last name' %}</label>
+                <input class="vTextField" id="id_last_name" name="last_name" type="text"/>
+            </div>
+        </div>
+        <div class="form-row field-firstname">
+            <div>
+                <label class="required" for="id_first_name">{% trans 'first name' %}</label>
+                <input class="vTextField" id="id_first_name" name="first_name" type="text"/>
+            </div>
+        </div>
+    </fieldset>
+{% endblock %}
