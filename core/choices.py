@@ -17,3 +17,11 @@ programas = (
     ('Sistemas','Ingeniería de Sistemas'),
     ('Admon Em','Administración de Empresas')
 )
+
+estado = (
+    (0, 'En revision'),
+    (1, 'Aprobado por lider de grupo'),
+    (2, 'Aprobado por coordinador'),
+    (3, 'Publicado'),
+    (4, 'Rechazado'),
+)

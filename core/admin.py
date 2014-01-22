@@ -7,7 +7,7 @@ from django.db import models
 from django.forms.formsets import all_valid
 from django.forms.util import ErrorList
 from django.utils.encoding import force_text
-from core.models import Coordinador,LiderGrupo,Estudiante
+from core.models import Coordinador,LiderGrupo,Estudiante,Semillero,Linea_investigacion,Articulo,Anotacion
 from django.utils.translation import ugettext as _
 from semilleros.forms import UserForm
 
@@ -124,3 +124,7 @@ class EstudianteAdmin(ProfileAdmin):
 admin.site.register(Coordinador,CoordinadorAdmin)
 admin.site.register(LiderGrupo, LiderGrupoAdmin)
 admin.site.register(Estudiante,EstudianteAdmin)
+admin.site.register(Semillero)
+admin.site.register(Linea_investigacion)
+admin.site.register(Articulo)
+admin.site.register(Anotacion)
