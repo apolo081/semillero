@@ -1,0 +1,37 @@
+{% extends 'admin/change_form.html' %}
+{% load i18n %}
+{% block after_field_sets %}
+    <fieldset class="module aligned">
+    <legend>{% trans 'user'|capfirst %}</legend>
+        <div class="form-row field-username">
+            <div>
+                <label for="id_username">{% trans 'username' %}</label>
+                <p>{{ user.username }}</p>
+            </div>
+        </div>
+        <div class="form-row field-password">
+            <div>
+                <label>{% trans 'password' %}</label>
+                <p>Por razones de seguridad, solo se muestra parte del hash del password {{ profile.password|slice:':5' }}***************************</p>
+            </div>
+        </div>
+        <div class="form-row field-email">
+            <div>
+                <label class="required" for="id_email">{% trans 'email address' %}</label>
+                <input class="vTextField" id="id_email" name="email" value="{{ profile.email }}" type="text"/>
+            </div>
+        </div>
+        <div class="form-row field-lastname">
+            <div>
+                <label class="required" for="id_last_name">{% trans 'last name' %}</label>
+                <input class="vTextField" id="id_last_name" name="last_name"  value="{{ profile.last_name }}" type="text"/>
+            </div>
+        </div>
+        <div class="form-row field-firstname">
+            <div>
+                <label class="required" for="id_first_name">{% trans 'first name' %}</label>
+                <input class="vTextField" id="id_first_name" name="first_name" value="{{ profile.first_name }}" type="text"/>
+            </div>
+        </div>
+    </fieldset>
+{% endblock %}
