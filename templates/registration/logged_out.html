@@ -1,12 +1,22 @@
 {% extends "admin/base_site.html" %}
 {% load i18n %}
 
-{% block breadcrumbs %}<div class="breadcrumbs"><a href="{% url 'admin:index' %}">{% trans 'Home' %}</a></div>{% endblock %}
+{% block breadcrumbs %}
+{% endblock %}
 
 {% block content %}
 
-<p>{% trans "Thanks for spending some quality time with the Web site today." %}</p>
+    <p>{% trans "Thanks for spending some quality time with the Web site today." %} Será redirigido en pocos segundos...</p>
 
-<p><a href="{% url 'admin:index' %}">{% trans 'Log in again' %}</a></p>
+{% endblock %}
 
+{% block aside %}
+{% endblock %}
+
+{% block extrajs %}
+    <script>
+        setTimeout(function(){
+                location.href="{% url 'admin:index' %}";
+            },3000);
+    </script>
 {% endblock %}

@@ -1,8 +1,17 @@
 {% load i18n %}
-<h3>{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}</h3>
-<ul>
-{% for choice in choices %}
-    <li{% if choice.selected %} class="selected"{% endif %}>
-    <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a></li>
-{% endfor %}
-</ul>
+
+<div class="filters col-sm-5 col-lg-12">
+    <div class="btn-group">
+        <button class="btn btn-default" data-toggle="dropdown">{% blocktrans with filter_title=title %} By {{ filter_title }} {% endblocktrans %}</button>
+        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu" style="list-style-type: none !important;">
+            {% for choice in choices %}
+                <li{% if choice.selected %} class="selected"{% endif %}>
+                    <a href="{{ choice.query_string|iriencode }}">{{ choice.display }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
