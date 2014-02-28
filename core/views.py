@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from django.shortcuts import render, render_to_response, redirect
+from django.template.context import RequestContext
+
+def index(request):
+    return render_to_response('home/base.html',context_instance = RequestContext(request))
