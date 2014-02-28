@@ -59,6 +59,7 @@ ROOT_URLCONF = 'semilleros.urls'
 WSGI_APPLICATION = 'semilleros.wsgi.application'
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'django.core.context_processors.request',
     'core.context_processors.applist',
 )
 # Database

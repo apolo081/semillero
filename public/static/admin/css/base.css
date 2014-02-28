@@ -14,7 +14,7 @@ body {
 /* LINKS */
 
 a:link, a:visited {
-    color: #5b80b2;
+
     text-decoration: none;
 }
 
@@ -85,7 +85,6 @@ h5 {
 }
 
 ul li {
-    list-style-type: square;
     padding: 1px 0;
 }
 
@@ -102,8 +101,7 @@ li ul {
 }
 
 li, dt, dd {
-    font-size: 11px;
-    line-height: 14px;
+
 }
 
 dt {
@@ -263,7 +261,6 @@ tfoot td {
     color: #666;
     padding: 2px 5px;
     font-size: 11px;
-    background: #e1e1e1 url(../img/nav-bg.gif) top left repeat-x;
     border-left: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
@@ -318,10 +315,6 @@ thead th a:link, thead th a:visited {
     color: #666;
 }
 
-thead th.sorted {
-    background: #c5c5c5 url(../img/nav-bg-selected.gif) top left repeat-x;
-}
-
 thead th.sorted .text {
 	padding-right: 42px;
 }
@@ -337,9 +330,7 @@ table thead th .text a {
     padding: 2px 5px;
 }
 
-table thead th.sortable:hover {
-    background: white url(../img/nav-bg-reverse.gif) 0 -5px repeat-x;
-}
+
 
 thead th.sorted a.sortremove {
     visibility: hidden;
@@ -603,7 +594,7 @@ div.system-message p.system-message-title {
 /* BREADCRUMBS */
 
 div.breadcrumbs {
-    background: white url(../img/nav-bg-reverse.gif) 0 -10px repeat-x;
+
     padding: 2px 8px 3px 8px;
     font-size: 11px;
     color: #999;
