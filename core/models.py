@@ -23,8 +23,8 @@ class LiderGrupo(models.Model):
     codigo = models.CharField(max_length=15,verbose_name='Código')
 
     class Meta:
-        verbose_name = 'Líder_de_Grupo'
-        verbose_name_plural = 'Líderes_de_Grupo'
+        verbose_name = 'Líder de Grupo'
+        verbose_name_plural = 'Líderes de Grupo'
 
     def __unicode__(self):
         return u'{0} {1}'.format(self.user.first_name,self.user.last_name)
@@ -57,18 +57,18 @@ class Semillero(models.Model):
         return u'{0} : {1} '.format(self.nombre,self.programa)
 
 class Linea_investigacion(models.Model):
-    nombre = models.CharField(max_length = 20, verbose_name='Linea_investigación')
+    nombre = models.CharField(max_length = 20, verbose_name='Linea investigación')
     semillero = models.ForeignKey('Semillero')
 
     class Meta:
-        verbose_name = 'Línea_investigación'
-        verbose_name_plural = 'Líneas_investigación'
+        verbose_name = 'Línea investigación'
+        verbose_name_plural = 'Líneas de investigación'
 
     def __unicode__(self):
         return u'{0} : {1} '.format(self.nombre,self.semillero)
 
 class Articulo (models.Model):
-    titulo = models.CharField(max_length= 20, verbose_name='Título_Artículo')
+    titulo = models.CharField(max_length= 20, verbose_name='Título Artículo')
     documento = models.FileField(upload_to= utils.content_file_name)
     estudiante = models.ForeignKey('Estudiante')
     semillero = models.ForeignKey('Semillero')
@@ -76,8 +76,8 @@ class Articulo (models.Model):
     estado = models.IntegerField(choices= choices.estado)
 
     class Meta:
-        verbose_name = 'Título_Artículo'
-        verbose_name_plural = 'Títulos_de_artículos'
+        verbose_name = 'Título Artículo'
+        verbose_name_plural = 'Títulos de artículos'
 
     def __unicode__(self):
         return u'{0} {1} {2} {3}'.format(self.titulo,self.semillero,self.estudiante,self.estado)
