@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS as TCP
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -58,7 +58,9 @@ ROOT_URLCONF = 'semilleros.urls'
 
 WSGI_APPLICATION = 'semilleros.wsgi.application'
 
-
+TEMPLATE_CONTEXT_PROCESSORS = TCP + (
+    'core.context_processors.applist',
+)
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
